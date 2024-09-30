@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import TodoList from '../form/TodoList';
 import TodoForm from '../form/TodoForm';
-import './BenchPress.css'
+import logo from './benchpress.png'
+// import './BenchPress.css'
 const BenchPress: React.FC = () => {
     const [refresh, setRefresh] = useState<boolean>(false);
 
@@ -12,6 +13,7 @@ const BenchPress: React.FC = () => {
   return (<>
     <div className='core'>
       <h1>Bench Press</h1>
+      <img src={logo} alt="Logo" />
       <TodoForm onTaskAdded={handleTaskAdded} />
       <TodoList key={refresh} />
     </div></>

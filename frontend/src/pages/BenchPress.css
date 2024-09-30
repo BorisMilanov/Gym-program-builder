@@ -1,28 +1,37 @@
-/* Default background for large screens (desktops) */
 body {
-    background-image: url('benchpress.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  /* Background for tablets (max-width: 768px) */
-  @media only screen and (max-width: 768px) {
+    background-color:#55524A;
+
+}
+
+img {
+    width: 900px;
+    height: 800px;
+}
+
+/* Background for tablets (max-width: 768px) */
+@media only screen and (max-width: 768px) {
     body {
-      background-image: url('benchpress.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+        background-color:#55524A;
+        background-size: cover;
+
+        background-repeat: no-repeat;
+
+
     }
-  }
-  
-  /* Background for small smartphones (max-width: 480px) */
-  @media only screen and (max-width: 480px) {
+    img {
+        width: 300px;
+        height: 280px;
+    }
+    
+}
+
+/* Background for small smartphones (max-width: 480px) */
+@media only screen and (max-width: 480px) {
     body {
-      background-image: url('benchpress.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+        background-image: url('benchpress.png');
+        background-size: cover;
+
+        background-repeat: no-repeat;
+        height: 100%;
     }
-  }
-  
+}
