@@ -1,13 +1,22 @@
+import React from 'react';
+import { useState } from 'react';
+import TodoForm from './form/TodoForm';
+import TodoList from './form/TodoLIst';
 
-import About from './pages/About'
-function App() {
+const App: React.FC = () => {
+  const [refresh, setRefresh] = useState<boolean>(false);
 
+  const handleTaskAdded = () => {
+    setRefresh(!refresh); // Trigger a re-fetch of tasks
+  };
 
   return (
-    <>
-      <About></About>
-    </>
-  )
-}
+    <div>
+      <h1>To-Do List</h1>
+      <TodoForm onTaskAdded={handleTaskAdded} />
+      <TodoList key={refresh} />
+    </div>
+  );
+};
 
-export default App
+export default App;
