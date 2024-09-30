@@ -1,8 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-import TodoForm from './form/TodoForm';
-import TodoList from './form/TodoLIst';
-
+import BenchPress from './pages/BenchPress';
+import PullUps from './pages/PullUps';
+// import TodoForm from './form/TodoForm';
+// import TodoList from './form/TodoLIst';
+import Navbar from './pages/Navbar'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 const App: React.FC = () => {
   const [refresh, setRefresh] = useState<boolean>(false);
 
@@ -12,9 +15,18 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <h1>To-Do List</h1>
+     
+      {/* <h1>To-Do List</h1>
       <TodoForm onTaskAdded={handleTaskAdded} />
-      <TodoList key={refresh} />
+      <TodoList key={refresh} /> */}
+       <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/bench-press" element={<BenchPress />} />
+        <Route path="/pull-ups" element={<PullUps />} />
+        <Route path="/" element={<h1>Welcome to the Fitness App</h1>} /> {/* Default Home Route */}
+      </Routes>
+    </Router>
     </div>
   );
 };
