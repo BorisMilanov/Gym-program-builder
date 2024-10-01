@@ -1,37 +1,52 @@
-body {
-    background-color:#55524A;
+ body {
+     background-color: #55524A;
 
+ }
+
+h1{
+    text-align: center;
+    color: aqua;
 }
-
-img {
-    width: 900px;
-    height: 800px;
-}
-
-/* Background for tablets (max-width: 768px) */
-@media only screen and (max-width: 768px) {
-    body {
-        background-color:#55524A;
-        background-size: cover;
-
-        background-repeat: no-repeat;
-
-
-    }
-    img {
-        width: 300px;
-        height: 280px;
-    }
+img{
+    display: flex;
+   
+    width: 120px;
+    height: 120px;
     
 }
-
-/* Background for small smartphones (max-width: 480px) */
-@media only screen and (max-width: 480px) {
-    body {
-        background-image: url('benchpress.png');
-        background-size: cover;
-
-        background-repeat: no-repeat;
-        height: 100%;
-    }
+.saveBtn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
+.inp-Exersice{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    
+}
+ /* Background for tablets (max-width: 768px) */
+ @media only screen and (max-width: 768px) {
+    body {
+        background-color: #55524A;
+   
+    }
+    h1{
+        text-align: center;
+        color: aqua;
+    }
+ }
+
+
+ @media only screen and (max-width: 480px) {
+    body {
+        background-color: #55524A;
+   
+    }
+    h1{
+        text-align: center;
+        color: aqua;
+    }
+ }

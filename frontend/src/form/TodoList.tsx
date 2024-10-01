@@ -41,7 +41,7 @@ const TodoList: React.FC = () => {
 
   return (
     <div>
-      <h3>Your Tasks</h3>
+    
       <ul>
         {tasks.map((task) => (
           <TodoItem

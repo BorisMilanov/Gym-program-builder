@@ -1,6 +1,15 @@
 import React from 'react';
 import axios from 'axios';
+import CheckBox from '@mui/icons-material/CheckBox';
+import IconButton from '@mui/material/IconButton';
+import Stack from '@mui/material/Stack';
+import DeleteIcon from '@mui/icons-material/Delete';
+import AlarmIcon from '@mui/icons-material/Alarm';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { pink } from '@mui/material/colors';
 
+import './TodoLi.css'
+import { Checkbox } from '@mui/material';
 interface Task {
   _id: string;
   task: string;
@@ -24,6 +33,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ task, onUpdate, onDelete }) => {
       console.error('Error updating task:', error);
     }
   };
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   const deleteTask = async () => {
     try {
@@ -35,11 +45,20 @@ const TodoItem: React.FC<TodoItemProps> = ({ task, onUpdate, onDelete }) => {
   };
 
   return (
-    <li style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
-      <input type="checkbox" checked={task.completed} onChange={toggleComplete} />
-      {task.task}
-      <button onClick={deleteTask}>Delete</button>
-    </li>
+  
+ 
+      <li style={{ textDecoration: task.completed ? 'line-through' : 'none' }} className='todo li'>
+      <p className='kilo'>Kilograms {task.task}</p>
+      
+      <Checkbox className='complete-btn'
+        checked={task.completed}
+        onChange={toggleComplete}
+        inputProps={{ 'aria-label': 'controlled' }}
+      />
+      <IconButton className='trash-btn' aria-label="delete" onClick={deleteTask}>
+        <DeleteIcon />
+      </IconButton></li>
+    
   );
 };
 

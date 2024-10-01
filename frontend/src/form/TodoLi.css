@@ -1,0 +1,30 @@
+.todo {
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    background: yellow;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2rem;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.kilo {
+    padding-left: 100px;
+}
+
+.trash-btn {
+    position: absolute;
+    left: -30px;
+}
+
+.complete-btn {
+    position: absolute;
+    left: 470px;
+}

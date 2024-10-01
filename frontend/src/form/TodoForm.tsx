@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import bench from '../pages/benchpress.png'
+import './TodoForm.css'
 interface TodoFormProps {
   onTaskAdded: () => void;
 }
@@ -24,12 +25,13 @@ const TodoForm: React.FC<TodoFormProps> = ({ onTaskAdded }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+      className='inp-Exersice'
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
         placeholder="Enter a new task"
       />
-      <button type="submit">
+      <button type="submit" className='saveBtn'>
       <img
           src={bench}// Replace with your image URL
           alt="submit"

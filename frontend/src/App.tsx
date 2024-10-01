@@ -7,11 +7,6 @@ import PullUps from './pages/PullUps';
 import Navbar from './pages/Navbar'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 const App: React.FC = () => {
-  const [refresh, setRefresh] = useState<boolean>(false);
-
-  const handleTaskAdded = () => {
-    setRefresh(!refresh); // Trigger a re-fetch of tasks
-  };
 
   return (
     <div>
