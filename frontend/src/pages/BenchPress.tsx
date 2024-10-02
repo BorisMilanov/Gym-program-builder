@@ -14,7 +14,7 @@ const BenchPress: React.FC = () => {
         <div className='core'>
             <h1>Bench Press</h1>
             {/* <img src={logo} alt="Logo" /> */}
-            <TodoList key={refresh} />
+            <TodoList key={refresh ? 'refresh-true' : 'refresh-false'} />
             <TodoForm onTaskAdded={handleTaskAdded} />
         </div></>
     );
