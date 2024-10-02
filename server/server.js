@@ -13,8 +13,6 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/todolistdb', { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Define Task Schema
 const taskSchema = new mongoose.Schema({
     task: { type: String, required: true },
     completed: { type: Boolean, default: false },
