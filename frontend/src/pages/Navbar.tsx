@@ -11,7 +11,7 @@ export default function Navbar() {
   const drawer = (
     <List>
       {['Bench Press', 'Pull-ups'].map((text) => (
-        <ListItem button key={text} component={Link} to={`/${text.replace(' ', '-').toLowerCase()}`}>
+        <ListItem  key={text} component={Link} to={`/${text.replace(' ', '-').toLowerCase()}`}>
           <ListItemText primary={text} />
         </ListItem>
       ))}
