@@ -29,7 +29,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ task, onUpdate, onDelete }) => {
       console.error('Error updating task:', error);
     }
   };
-  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+  // const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   const deleteTask = async () => {
     try {
